@@ -1,5 +1,6 @@
 package pl.torunjug.swarm.entrystore.entry;
 
+import org.jboss.logging.Logger;
 import org.wildfly.swarm.topology.Advertise;
 
 import javax.inject.Inject;
@@ -19,18 +20,21 @@ import java.util.List;
 @Advertise("entry-store")
 public class EntryEndpoint {
 
+    private static final Logger log = Logger.getLogger(EntryEndpoint.class);
+
     @Inject
     private EntryDao entryDao;
 
     @GET
     public List<Entry> getAll() {
+        log.warn("listing all entries without max count.");
         return entryDao.getAll();
     }
 
     @POST
     public Entry save(Entry entry) {
+        log.info("adding entry with content: " + entry.getContent());
         return entryDao.save(entry);
     }
-
 
 }

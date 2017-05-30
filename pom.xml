@@ -40,6 +40,10 @@
         </dependency>
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
+            <artifactId>logstash</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
             <artifactId>jaxrs</artifactId>
         </dependency>
         <dependency>
@@ -85,6 +89,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <mainClass>pl.torunjug.swarm.entrystore.App</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
