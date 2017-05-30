@@ -25,6 +25,9 @@ public class EntryEndpoint {
     @Inject
     private EntryDao entryDao;
 
+    @Inject
+    private QuoteService quoteService;
+
     @GET
     public List<Entry> getAll() {
         log.warn("listing all entries without max count.");
@@ -34,6 +37,9 @@ public class EntryEndpoint {
     @POST
     public Entry save(Entry entry) {
         log.info("adding entry with content: " + entry.getContent());
+        if (entry.getQuote() == null) {
+            entry.setQuote(quoteService.getQuote());
+        }
         return entryDao.save(entry);
     }
 

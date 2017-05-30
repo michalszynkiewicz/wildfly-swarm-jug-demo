@@ -17,6 +17,8 @@ public class Entry {
 
     private String content;
 
+    private String quote;
+
     public Long getId() {
         return id;
     }
@@ -31,5 +33,13 @@ public class Entry {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getQuote() {
+        return quote;
+    }
+
+    public void setQuote(String quote) {
+        this.quote = quote;
     }
 }
