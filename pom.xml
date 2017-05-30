@@ -33,13 +33,11 @@
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
         </dependency>
-        <!--
-                <dependency>
+        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.187</version>
         </dependency>
-        -->
 
     </dependencies>
 
