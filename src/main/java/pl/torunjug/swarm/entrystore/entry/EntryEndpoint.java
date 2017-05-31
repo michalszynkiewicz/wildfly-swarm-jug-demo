@@ -1,7 +1,6 @@
 package pl.torunjug.swarm.entrystore.entry;
 
 import org.jboss.logging.Logger;
-import org.wildfly.swarm.topology.Advertise;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -17,7 +16,6 @@ import java.util.List;
 @Consumes("application/json")
 @Produces("application/json")
 @Path("/entries")
-@Advertise("entry-store")
 public class EntryEndpoint {
 
     private static final Logger log = Logger.getLogger(EntryEndpoint.class);

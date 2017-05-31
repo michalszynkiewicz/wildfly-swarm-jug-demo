@@ -1,6 +1,7 @@
 package pl.torunjug.swarm.entrystore.entry;
 
 import org.jboss.arquillian.junit.Arquillian;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.wildfly.swarm.arquillian.DefaultDeployment;
@@ -19,6 +20,7 @@ import static org.junit.Assert.*;
  */
 @RunWith(Arquillian.class)
 @DefaultDeployment
+@Ignore
 public class EntryEndpointTest {
     @Inject
     private EntryEndpoint entryEndpoint;
